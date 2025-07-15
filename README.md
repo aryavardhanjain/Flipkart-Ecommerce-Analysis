@@ -25,18 +25,43 @@ This project involves exploratory data analysis (EDA) on a dataset of ~20,000 Fl
 
 ## 🎯 Business Questions Explored
 
-1. **Which categories have the highest average retail and discounted prices?**
-2. **What are the top 10 most expensive products on Flipkart?**
-3. **Which brands offer the most discounted products (absolute and % terms)?**
-4. **How does average discount (%) vary across categories?**
-5. **What is the distribution of products across different price ranges?**
-6. **Which categories have the highest number of listings?**
-7. **Which products or brands have the highest ratings (if available)?**
-8. **How does the average rating vary by category or brand?**
+### ✅ 1. Which brands offer the most discounted products (by average %)?
+We computed average discount percentage for each brand and identified the **Top 10 brands** with the highest discounts — most of them offer over 85% average discount.
+
+### ✅ 2. What is the distribution of products across different price ranges?
+We categorized products into price ranges (`<500`, `500-999`, `1000+`) and calculated the **average discount %** within each range. Surprisingly, **lower-priced products had higher average discounts**.
+
+### ✅ 3. What is the distribution of retail prices and discount percentages?
+- **Retail prices** are highly right-skewed with most products priced under ₹2000.
+- **Discount percentages** peaked around 0% and 60%, with many products offering flat discounts.
 
 ---
 
-## 📊 Tools & Libraries
+## 📊 Visual Insights
+
+We used a range of charts to uncover key trends in pricing and discounts:
+
+### 🛒 Top Retail Price Points
+![Top Retail Prices](visuals/top_retail_prices.png)
+
+### 📉 Retail Price Distribution (Log Scale)
+![Retail Price Log Distribution](visuals/log_scaled_retail_prices.png)
+
+### 💸 Discount Distribution
+![Discount Percent Distribution](visuals/discount_distribution.png)
+
+### 🏷️ Top Brands by Average Discount
+![Top Discount Brands](visuals/top_discount_brands.png)
+
+### 🔢 Product Count by Discounted Price Range
+![Product Count by Range](visuals/product_count_by_range.png)
+
+### 📉 Average Discount by Price Range
+![Average Discount by Range](visuals/avg_discount_by_price_range.png)
+
+---
+
+## 🛠️ Tools & Libraries
 
 - **Language:** Python (Jupyter Notebook)
 - **Libraries:** pandas, numpy, matplotlib, seaborn
@@ -44,26 +69,25 @@ This project involves exploratory data analysis (EDA) on a dataset of ~20,000 Fl
 
 ---
 
-## 📈 Project Structure
+## 📁 Project Structure
 
 ```
 Flipkart-Ecommerce-Analysis/
-│
 ├── data/
 │   └── flipkart_cleaned.csv
 ├── notebooks/
-│   └── 01_data_cleaning.ipynb
+│   ├── 01_data_cleaning.ipynb
+│   └── 02_eda_analysis.ipynb
 ├── visuals/
-│   └── (to be added in EDA)
-├── README.md
+│   └── *.png (charts shown above)
+└── README.md
 ```
 
 ---
 
 ## 📌 Next Steps
 
-- Perform in-depth EDA and visualizations
-- Answer the business questions with plots and summary tables
+- Continue answering remaining business questions
 - Identify patterns or pricing anomalies that could inform business decisions
 
 ---
